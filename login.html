@@ -26,7 +26,7 @@
             <br>
             <button>login</button>
             <br>
-            <p>Dom't have an account?<a href="https://youtu.be/haqVWhMcwd0?si=EP5CB_JvEsq7koRf" class="reg">Register</a></p>
+            <p>Dom't have an account?<a href="#" class="reg">Register</a></p>
         </form>
         </div>
        </div>
@@ -51,6 +51,7 @@
                 <br>
                 <button>sign up</button>
                 <br>
+                <p>Do you have an account?<a href="#" class="reg1">login</a></p>
             </form>
             </div>
 
@@ -60,10 +61,18 @@
 <script>
       
             var card = document.querySelector(".card");
+            let text= document.querySelector(".reg");
+            let text1= document.querySelector(".reg1");
             var angle=180;
             
-            card.addEventListener("click", function() {
-              card.style.transform = "rotateY("+angle+"deg) rotateZ("+angle+"deg)";
+            text.addEventListener("click", function() {
+              card.style.transform = "rotateY("+180+"deg) rotateZ("+180+"deg)";
+              angle=(angle+180)%360;
+              console.log("hello reg0");
+            });
+            text1.addEventListener("click", function() {
+                console.log("hello reg1");
+              card.style.transform = "rotateY("+0+"deg) rotateZ("+0+"deg)";
               angle=(angle+180)%360;
             });
 </script>
